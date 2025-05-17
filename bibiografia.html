@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Autobiografía de Erick Prudencio</title>
+  <base href="//erickbmarroquin.github.io/bibiografiapage/">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #eaf0ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: white;
+      padding: 12px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav a {
+      color: #4e54c8;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      background-color: #f0f0f0;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #4e54c8;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    section h2 {
+      color: #4e54c8;
+      margin-top: 0;
+    }
+
+    img, video {
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background: #4e54c8;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll("nav a");
+      const sections = document.querySelectorAll("main section");
+
+      function updateActiveLink() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove("active"));
+        if (navLinks[index]) navLinks[index].classList.add("active");
+      }
+
+      updateActiveLink();
+      window.addEventListener("scroll", updateActiveLink);
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Autobiografía de Erick Prudencio</h1>
+    <p>Un recorrido por mi vida, mis valores y sueños</p>
+  </header>
+
+  <nav>
+    <a href="#familiar">Familia</a>
+    <a href="#ninez">Niñez</a>
+    <a href="#adolescencia">Adolescencia</a>
+    <a href="#personal">Personal</a>
+    <a href="#academico">Académico</a>
+    <a href="#metas">Metas</a>
+    <a href="#pasatiempos">Pasatiempos</a>
+    <a href="#deportes">Deportes</a>
+    <a href="#gustos">Gustos</a>
+    <a href="#disgustos">No me gusta</a>
+    <a href="#admira">Admiro</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#videos">Videos</a>
+  </nav>
+
+  <main>
+    <section id="familiar">
+      <h2>Historia Familiar</h2>
+      <p>Mi familia representa el apoyo más grande de mi vida. Desde pequeño he recibido amor, orientación y un sentido fuerte de identidad.</p>
+    </section>
+
+    <section id="ninez">
+      <h2>Niñez</h2>
+      <p>Recuerdo mi infancia como una etapa de juegos, imaginación y descubrimientos que dejaron huellas positivas en mí.</p>
+    </section>
+
+    <section id="adolescencia">
+      <h2>Adolescencia</h2>
+      <p>Fue un tiempo de autoconocimiento, cambios y aprendizajes importantes que me ayudaron a definir mi carácter.</p>
+    </section>
+
+    <section id="personal">
+      <h2>Vida Personal</h2>
+      <p>Me considero alguien tranquilo, observador y con grandes deseos de superación personal y profesional.</p>
+    </section>
+
+    <section id="academico">
+      <h2>Vida Académica</h2>
+      <p>Siempre he valorado el aprendizaje. Los estudios me han ayudado a fortalecer habilidades y abrir nuevas posibilidades.</p>
+    </section>
+
+    <section id="metas">
+      <h2>Metas</h2>
+      <p>Mi meta principal es ser una persona íntegra, contribuir a mi comunidad y alcanzar mis objetivos profesionales con pasión.</p>
+    </section>
+
+    <section id="pasatiempos">
+      <h2>Pasatiempos</h2>
+      <p>Me gusta leer, ver documentales, explorar nuevas tecnologías y pasar tiempo con mi familia y amigos.</p>
+    </section>
+
+    <section id="deportes">
+      <h2>Deportes</h2>
+      <p>Practico fútbol y me gusta correr. Me ayudan a mantenerme activo, saludable y disciplinado.</p>
+    </section>
+
+    <section id="gustos">
+      <h2>Lo que me gusta</h2>
+      <p>Disfruto aprender cosas nuevas, conocer otras culturas y ayudar a quienes me rodean.</p>
+    </section>
+
+    <section id="disgustos">
+      <h2>Lo que no me gusta</h2>
+      <p>No me gusta la injusticia, la arrogancia ni el desinterés por los problemas del mundo.</p>
+    </section>
+
+    <section id="admira">
+      <h2>A quienes admiro</h2>
+      <p>Admiro a mis padres, a mis maestros y a todas aquellas personas que luchan con esfuerzo y humildad por mejorar su entorno.</p>
+    </section>
+
+    <section id="fotos">
+      <h2>Fotos</h2>
+      <p>Algunos recuerdos importantes:</p>
+      <img src="foto1.jpg" alt="Foto de la infancia">
+      <img src="foto2.jpg" alt="Foto con familia">
+    </section>
+
+    <section id="videos">
+      <h2>Videos</h2>
+      <p>Un video que representa momentos especiales:</p>
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Tu navegador no admite el elemento de video.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Erick Prudencio | Proyecto de Autobiografía
+  </footer>
+
+</body>
+</html>
